@@ -59,7 +59,7 @@ void meniu_adaugare(int op)
             if(lldi.inserat_dvk)
                 cout<<"*adaugare efectuata cu succes*"<<endl<<endl;
             else
-                cout<<"!!Valoarea "<<y2<<" nu exista in llsi!!"<<endl<<endl;
+                cout<<"!!Valoarea "<<y2<<" nu exista in lldi!!"<<endl<<endl;
         }
         else if(op==4)
         {
@@ -70,7 +70,7 @@ void meniu_adaugare(int op)
             if(lldi.inserat_ivk)
                 cout<<"*adaugare efectuata cu succes*"<<endl<<endl;
             else
-                cout<<"!!Valoarea "<<y2<<" nu exista in llsi!!"<<endl<<endl;
+                cout<<"!!Valoarea "<<y2<<" nu exista in lldi!!"<<endl<<endl;
         }
         else if(op==5)
         {
@@ -81,7 +81,7 @@ void meniu_adaugare(int op)
             if(lldi.inserat_ppk)
                 cout<<"*adaugare efectuata cu succes*"<<endl<<endl;
             else
-                cout<<"!!Pozitia "<<k2<<" nu exista in llsi!!"<<endl<<endl;
+                cout<<"!!Pozitia "<<k2<<" nu exista in lldi!!"<<endl<<endl;
         }
     }
     while(op!=0);
@@ -89,7 +89,58 @@ void meniu_adaugare(int op)
 
 void meniu_eliminare(int op)
 {
+    do
+    {
+        if(lldi.prim!=NULL)
+        {
+            op=-1;
+            cout<<"~~~Eliminare~~~"<<endl;
+            cout<<"1.Stergerea primului nod"<<endl;
+            cout<<"2.Stergerea ultimului nod"<<endl;
+            cout<<"3.Stergerea nodului cu valoarea y"<<endl;
+            cout<<"4.Stergerea nodului de pe pozitia k"<<endl;
+            cout<<"0.Exit"<<endl<<endl;
+            c_lldi.citire_optiune(op,4);
+            cout<<endl;
 
+            if(op==1)
+            {
+                lldi.stergere_primul(lldi.prim,lldi.ultim);
+                cout<<"*stergere efectuata cu succes*"<<endl<<endl;
+            }
+            else if(op==2)
+            {
+                lldi.stergere_ultimu(lldi.prim,lldi.ultim);
+                cout<<"*stergere efectuata cu succes*"<<endl<<endl;
+            }
+            else if(op==3)
+            {
+                cout<<"y= "; c_lldi.citire_valori(y2,"y= ");
+                cout<<endl;
+                lldi.stergere_k(lldi.prim,lldi.ultim,y2);
+                if(lldi.sters_k)
+                    cout<<"*stergere efectuata cu succes*"<<endl<<endl;
+                else
+                    cout<<"!!Valoarea "<<y2<<" nu exista in lldi!!"<<endl<<endl;
+            }
+            else if(op==4)
+            {
+                cout<<"k= "; c_lldi.citire_valori(k2,"k= ");
+                cout<<endl;
+                lldi.stergere_pk(lldi.prim,lldi.ultim,k2);
+                if(lldi.sters_pk)
+                    cout<<"*stergere efectuata cu succes*"<<endl<<endl;
+                else
+                    cout<<"!!Pozitia "<<k2<<" nu exista in lldi!!"<<endl<<endl;
+            }
+        }
+        else
+        {
+            cout<<"!!Lista este goala!!"<<endl<<endl;
+            op=0;
+        }
+    }
+    while(op!=0);
 }
 
 void M_lldi::lldi_menu()
