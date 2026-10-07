@@ -11,7 +11,7 @@ int n2,x2,y2,k2;
 
 void creare_lldi()
 {
-    lldi.int_lldi(lldi.prim,lldi.ultim);
+    lldi.int_lldi(lldi.prim,lldi.ultim,lldi.lldi_creat);
     cout<<"nr de valori n= ";c_lldi.citire_valori(n2,"nr de valori n=");
     lldi.creare_primul(lldi.prim,lldi.ultim);
     for(int i=2;i<=n2;i++)
