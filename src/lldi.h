@@ -8,8 +8,9 @@ class Lldi{
             int info;
             nod *urm;
             nod *prec;
-        }*p,*prim,*ultim;
+        }*p,*prim,*ultim,*prim_coada,*ultim_coada;
 
+        bool coada_creat=false;
         bool lldi_creat=false;
         bool inserat_dvk=false;
         bool inserat_ivk=false;
@@ -17,7 +18,7 @@ class Lldi{
         bool sters_k=false;
         bool sters_pk=false;
         
-        void int_lldi(nod*&prim,nod*&ultim);
+        void int_lldi(nod*&prim,nod*&ultim,bool&creat);
         void creare_primul(nod *&prim,nod *&ultim);
         void afisez(nod*prim,nod*ultim);
 

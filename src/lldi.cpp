@@ -5,10 +5,10 @@ using namespace std;
 
 Citiri citi_lldi;
 
-void Lldi::int_lldi(nod*&prim,nod*&ultim)
+void Lldi::int_lldi(nod*&prim,nod*&ultim,bool&creat)
 {
     prim=ultim=NULL;
-    lldi_creat=true;
+    creat=true;
 }
 
 void Lldi::creare_primul(nod *&prim,nod *&ultim)
