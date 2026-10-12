@@ -7,8 +7,9 @@ class Llsi{
         {
             int info;
             nod *urm;
-        }*p,*prim,*ultim;
+        }*p,*prim,*ultim,*prim_stiva,*ultim_stiva;
 
+        bool stiva_creat=false;
         bool llsi_creat=false;
         bool inserat_dvk=false;
         bool inserat_ivk=false;
@@ -16,7 +17,7 @@ class Llsi{
         bool sters_k=false;
         bool sters_pk=false;
         
-        void int_llsi(nod*&prim,nod*&ultim);
+        void int_llsi(nod*&prim,nod*&ultim,bool&creat);
         void creare_primul(nod *&prim,nod *&ultim);
         void afisez(nod*prim,nod*ultim);
 
