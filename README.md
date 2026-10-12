@@ -1,1 +1,1 @@
-proiect liste dinamice
+Proiect Liste Dinamice
