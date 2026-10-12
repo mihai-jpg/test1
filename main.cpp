@@ -2,6 +2,7 @@
 #include "src/menu_lldi.h"
 #include "src/citiri.h"
 #include "src/menu_coada.h"
+#include "src/menu_stiva.h"
 #include <iostream>
 using namespace std;
 
@@ -9,6 +10,7 @@ int main(){
     M_llsi m_llsi;
     M_lldi m_lldi;
     M_coada m_coada;
+    M_stiva m_stiva;
     Citiri c;
 
     int op;
@@ -20,9 +22,9 @@ int main(){
         cout<<"2. Lista Liniară Dublu Înlănțuită (LLDI)"<<endl;
         //cout<<"3. Lista Circulară"<<endl;
         cout<<"3. Coadă (FIFO)"<<endl;
-        //cout<<"4. Stivă (LIFO)"<<endl;
+        cout<<"4. Stivă (LIFO)"<<endl;
         cout<<"0. Exit"<<endl<<endl;
-        c.citire_optiune(op,3);
+        c.citire_optiune(op,4);
         cout<<endl;
 
         if(op==1)
@@ -36,6 +38,10 @@ int main(){
         else if(op==3)
         {
             m_coada.coada_menu();
+        }
+        else if(op==4)
+        {
+            m_stiva.stiva_menu();
         }
     }
     while(op!=0);

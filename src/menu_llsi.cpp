@@ -11,7 +11,7 @@ int n,x,i,y,k;
 
 void creare()
 {
-    llsi.int_llsi(llsi.prim,llsi.ultim);
+    llsi.int_llsi(llsi.prim,llsi.ultim,llsi.llsi_creat);
     cout<<"nr de valori n= ";c_llsi.citire_valori(n,"nr de valori n=");
     llsi.creare_primul(llsi.prim,llsi.ultim);
     for(i=2;i<=n;i++)
