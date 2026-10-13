@@ -44,7 +44,7 @@ void M_stiva::stiva_menu()
             }
             else if(op==2)
             {
-                llsi_stiva.stergere_primul(llsi_stiva.prim_stiva,llsi_stiva.ultim_stiva);
+                llsi_stiva.stergere_ultimu(llsi_stiva.prim_stiva,llsi_stiva.ultim_stiva);
                 cout<<"*stergere efectuata cu succes*"<<endl<<endl;
             }
             else if(op==3)
